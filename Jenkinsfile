@@ -12,9 +12,8 @@ pipeline {
         CYPRESS_CACHE_FOLDER = "./tmp/Cypress"
       }
       steps {
-        sh "npm install"
-        sh "npm install cypress"
-        sh "npx cypress run"
+        sh "yarn install"
+        sh "yarn cypress run"
         allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
       }
     }

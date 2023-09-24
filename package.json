@@ -9,11 +9,9 @@
   },
   "author": "Fernando Papito",
   "license": "MIT",
-  "devDependencies": {
-    "allure-commandline": "^2.21.0",
-    "cypress": "^13.2.0"
-  },
   "dependencies": {
+    "allure-commandline": "^2.21.0",
+    "cypress": "^13.2.0",
     "@mmisty/cypress-allure-adapter": "^0.10.5"
   }
 }

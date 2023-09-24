@@ -10,7 +10,7 @@ pipeline {
     stage('build and test') {
       steps {
         sh "yarn install"
-        sh "yarn cypress run"
+        sh "yarn test"
         allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
       }
     }

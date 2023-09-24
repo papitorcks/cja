@@ -14,7 +14,7 @@ pipeline {
   }
   post {
     always {
-      allure includeProperties: false, jdk: '', results: [
+      allure includeProperties: false, jdk: 'jdk1.8', results: [
         [path: 'allure-results']
       ]
     }

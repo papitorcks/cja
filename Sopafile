@@ -1,0 +1,11 @@
+pipeline {
+  agent any
+  stages {
+    stage('build docker louco') {
+      steps {
+        sh "docker build -t cypress-allure ."
+        sh "docker images"
+      }
+    }
+  }
+}

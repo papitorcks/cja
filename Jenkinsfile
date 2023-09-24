@@ -10,7 +10,6 @@ pipeline {
       steps {
         sh "yarn install"
         sh "yarn test"
-        sh 'npx allure'
         allure([
           includeProperties: false,
           jdk: '',

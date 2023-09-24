@@ -8,7 +8,7 @@ pipeline {
 
   stages {
     environment {
-      CYPRESS_CACHE_FOLDER=./tmp/Cypress
+      CYPRESS_CACHE_FOLDER = "./tmp/Cypress"
     }
     stage('build and test') {
       steps {

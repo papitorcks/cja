@@ -11,12 +11,8 @@ pipeline {
       steps {
         sh "npm install"
         sh "npx cypress run"
-      }
-    }
-  }
-  post {
-    always { 
         allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
+      }
     }
   }
 }

@@ -12,7 +12,20 @@ pipeline {
       steps {
         sh "yarn install"
         sh "yarn test"
-        allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
+      }
+    }
+    post {
+      always {
+        script {
+          sh 'npx allure'
+          allure([
+            includeProperties: false,
+            jdk: '',
+            properties: [],
+            reportBuildPolicy: 'ALWAYS',
+            results: [[path: 'allure-results']]
+          ])
+        }
       }
     }
   }

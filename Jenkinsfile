@@ -13,6 +13,7 @@ pipeline {
       }
       steps {
         sh "npm install"
+        sh "npm install cypress"
         sh "npx cypress run"
         allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
       }

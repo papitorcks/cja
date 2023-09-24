@@ -8,9 +8,6 @@ pipeline {
 
   stages {
     stage('build and test') {
-      environment {
-        CYPRESS_CACHE_FOLDER = "./tmp/Cypress"
-      }
       steps {
         sh "yarn install"
         sh "yarn cypress run"

@@ -7,10 +7,10 @@ pipeline {
   }
 
   stages {
-    environment {
-      CYPRESS_CACHE_FOLDER = "./tmp/Cypress"
-    }
     stage('build and test') {
+      environment {
+        CYPRESS_CACHE_FOLDER = "./tmp/Cypress"
+      }
       steps {
         sh "npm install"
         sh "npx cypress run"

@@ -4,8 +4,8 @@
   "description": "Projeto de testes de login com Cypress",
   "main": "index.js",
   "scripts": {
-    "cypress:test": "yarn cypress run",
-    "cypress:gui": "yarn cypress open"
+    "test": "yarn cypress run",
+    "posttest": "yarn allure generate allure-results --clean -o allure-report"
   },
   "author": "Fernando Papito",
   "license": "MIT",

@@ -10,7 +10,6 @@ pipeline {
         sh "rm -rf allure-results && rm -rf allure-report | true"
         sh "yarn install"
         sh "yarn test"
-        input message: 'Partiu?', ok: 'Bora'
       }
     }
   }

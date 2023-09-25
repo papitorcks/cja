@@ -5,7 +5,7 @@ describe('Login', () => {
     it ('usuário obrigatório', ()=> {
         cy.login(null, 'teste')
         cy.get(toast)
-            .should('have.text', 'Informe o seu nome de usuário!')
+            .should('have.text', 'Informe o seu nome de sopa!')
     })
 
     it ('senha obrigatória', ()=> {

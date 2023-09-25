@@ -1,14 +1,14 @@
 pipeline {
-  agent {
-    docker {
-      image 'cypress-allure'
-    }
-  }
+  agent any
   stages {
     stage('build and test') {
+      docker {
+        image 'cypress-allure'
+      }
       steps {
         sh "yarn install"
         sh "yarn test"
+        input message: 'Partiu?', ok: 'Bora'
       }
     }
   }

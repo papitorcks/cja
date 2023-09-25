@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'cypress-base-jdk'
+      image 'cypress-jdk-maven'
     }
   }
   stages {

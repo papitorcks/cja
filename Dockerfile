@@ -7,6 +7,13 @@ RUN tar zxvf openjdk-21_linux-aarch64_bin.tar.gz
 ENV JAVA_HOME=/jdk-21
 ENV PATH="$JAVA_HOME/bin:${PATH}"
 
+RUN wget https://mirrors.estointernet.in/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz --no-check-certificate
+RUN tar -xvf apache-maven-3.6.3-bin.tar.gz
+RUN mv apache-maven-3.6.3 /opt/
+
+ENV M2_HOME='/opt/apache-maven-3.6.3'
+ENV PATH="$M2_HOME/bin:$PATH"
+
 # a few environment variables to make NPM installs easier
 # good colors for most applications
 ENV TERM=xterm

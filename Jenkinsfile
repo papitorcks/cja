@@ -4,7 +4,7 @@ pipeline {
     stage('build and test') {
       agent {
         docker {
-          image 'cypress-allure'
+          image 'cypress/base:18.14.1'
         }
       }
       steps {

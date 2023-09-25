@@ -1,12 +1,11 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'cypress-base-jdk-21'
+    }
+  }
   stages {
     stage('build and test') {
-      agent {
-        docker {
-          image 'cypress/base:18.14.1'
-        }
-      }
       steps {
         sh "rm -rf allure-results && rm -rf allure-report | true"
         sh "yarn install"

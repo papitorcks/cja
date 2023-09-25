@@ -5,25 +5,25 @@ describe('Login', () => {
     it ('usuário obrigatório', ()=> {
         cy.login(null, 'teste')
         cy.get(toast)
-            .should('have.text', 'Informe o seu nome de usuário!')
+            .should('have.text', 'Informe o seu nome de usuáriu!')
     })
 
     it ('senha obrigatória', ()=> {
         cy.login('qa', null)
         cy.get(toast)
-            .should('have.text', 'Informe a sua senha secreta!')
+            .should('have.text', 'Informe a sua senha secret4!')
     })
 
     it('usuário não existe', () => {
         cy.login('teste', 'teste')
         cy.get(toast)
-            .should('have.text', 'Oops! Credenciais inválidas :(')
+            .should('have.text', 'Oops! Credenciais inválidaz :(')
     })
 
     it('senha incorreta', () => {
         cy.login('qa', 'teste')
         cy.get(toast)
-            .should('have.text', 'Oops! Credenciais inválidas :(')
+            .should('have.text', 'Oops! Credenciais inválidaz :(')
     })
 
     it('com sucesso', () => {

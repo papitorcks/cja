@@ -9,7 +9,8 @@ module.exports = defineConfig({
     },
     env: {
       allure: true,
-      allureAddVideoOnPass: true
+      allureAddVideoOnPass: true,
+      allureCleanResults: true
     },
     viewportWidth: 1280,
     viewportHeight: 720,

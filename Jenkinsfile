@@ -7,7 +7,6 @@ pipeline {
   stages {
     stage('build and test') {
       steps {
-        sh "rm -rf allure-results && rm -rf allure-report | true"
         sh "yarn install"
         sh "yarn test"
       }

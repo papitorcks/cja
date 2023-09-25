@@ -2,8 +2,10 @@ pipeline {
   agent any
   stages {
     stage('build and test') {
-      docker {
-        image 'cypress-allure'
+      agent {
+        docker {
+          image 'cypress-allure'
+        }
       }
       steps {
         sh "yarn install"
